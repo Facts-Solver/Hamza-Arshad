@@ -17,6 +17,18 @@
 	--second-bg-color: #112e42;
 	--text-color: #ededed;
 	--main-color: #00abf0;
+	--header-height: 100vh;
+	--header-padding-top: 30vh;
+}
+::-webkit-scrollbar{
+	width: 10px;
+}
+::-webkit-scrollbar-track{
+	background-color: var(--bg-color);
+}
+::-webkit-scrollbar-thumb{
+	background: linear-gradient(180deg,#00acf09a,var(--main-color));
+	border-radius: 8px;
 }
 .flex {
 	display: flex;
@@ -26,6 +38,9 @@
 }
 a {
 	color: var(--text-color);
+}
+i{
+	transition: none;
 }
 .m-auto{
 	margin: auto;
@@ -71,13 +86,13 @@ h2 span,h1 span{
 body {
 	color: var(--text-color);
 }
-.home {
-	background: url("home.jpg") center;
+header {
+	background: url("./assets/img/home.jpg") center;
 	background-size: cover;
-	height: 100vh;
 	position: relative;
 	z-index: 5;
-	padding-top: 30vh;
+	height: var(--header-height);
+	padding-top: var(--header-padding-top);
 }
 .main-nav-container{
 	align-items: center;
@@ -124,8 +139,37 @@ nav .active {
 .home-text .stroked-text {
 	font-size: 2.2rem;
 	margin-bottom: 20px;
-	-webkit-text-stroke: 1px var(--main-color);
-	color: transparent;
+	color: var(--main-color);
+	width: fit-content;
+	position: relative;
+	font-family: 'consolas',sans-serif;
+}
+.home-text .stroked-text::after{
+	position: absolute;
+	content: '';
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: var(--bg-color);
+	border-left: 2px solid var(--main-color);
+	animation: type 4s steps(18) infinite 1.2s, blink 0.7s linear infinite;
+}
+@keyframes type {
+	0%,100%{
+		transform: translateX(0);
+	}
+	80%,90%{
+		transform: translateX(100%);
+	}
+}
+@keyframes blink {
+	0%{
+		border-color: #00acf003
+	}
+	100%{
+		border-color: var(--main-color);
+	}
 }
 .home-text p {
 	font-size: 1.2rem;
@@ -188,13 +232,13 @@ nav .active {
 .btns button:nth-child(2):hover {
 	color: var(--bg-color);
 }
-.img-hover {
+.img-hover{
 	position: absolute;
 	width: 40%;
-	height: 100%;
+	height: var(--header-height);
 	content: '';
-	z-index: 0;
-	top: 0;
+	z-index: 1;
+	top: calc(var(--header-padding-top)*-1);
 	right: 0;
 	background: transparent;
 	transition: all 3s ease-in-out;
@@ -206,12 +250,12 @@ nav .active {
 .social-links, .social-links a {
 	justify-content: center;
 	align-items: center;
-	transition: none;
 }
 .social-links {
 	margin-top: 3rem;
 	font-size: 1.9rem;
 	gap: 30px;
+	width: 50%;
 }
 .social-links a {
 	border: 2px solid var(--main-color);
