@@ -72,7 +72,7 @@ body {
 	color: var(--text-color);
 }
 .home {
-	background: url("./assets/img/home.jpg") center;
+	background: url("home.jpg") center;
 	background-size: cover;
 	height: 100vh;
 	position: relative;
