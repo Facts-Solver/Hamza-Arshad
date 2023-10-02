@@ -87,7 +87,7 @@ body {
 	color: var(--text-color);
 }
 header {
-	background: url("home.jpg") center;
+	background: url("./assets/img/home.jpg") center;
 	background-size: cover;
 	position: relative;
 	z-index: 5;
