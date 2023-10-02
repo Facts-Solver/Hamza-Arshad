@@ -18,16 +18,6 @@
 	--text-color: #ededed;
 	--main-color: #00abf0;
 }
-::-webkit-scrollbar{
-	width: 8px;
-}
-::-webkit-scrollbar-thumb{
-	background-color: var(--main-color);
-	border-radius: 5px;
-}
-::-webkit-scrollbar-track{
-	background-color: var(--bg-color);
-}
 .flex {
 	display: flex;
 }
@@ -52,6 +42,18 @@ a {
 .column{
 	flex-direction: column;
 }
+.hide{
+	filter: blur(5px);
+	opacity: 0;
+	transform: translateX(-100%);
+	transition: all 1s ease;
+}
+.show{
+	filter: blur(0);
+	opacity: 1;
+	transform: translateX(0);
+	transition: all 1s ease;
+}
 h2{
 	font-size: 3em;
 	text-align: center;
@@ -70,7 +72,7 @@ body {
 	color: var(--text-color);
 }
 .home {
-	background: url("home.jpg") center;
+	background: url("./assets/img/home.jpg") center;
 	background-size: cover;
 	height: 100vh;
 	position: relative;
@@ -123,50 +125,7 @@ nav .active {
 	font-size: 2.2rem;
 	margin-bottom: 20px;
 	-webkit-text-stroke: 1px var(--main-color);
-	background-image: linear-gradient(0deg,var(--main-color),var(--main-color));
-	background-position: -356px 0;
-	-webkit-background-clip: text;
-	background-repeat: no-repeat;
 	color: transparent;
-	width: fit-content;
-	position: relative;
-	animation: fill 4s linear infinite;
-}
-.home-text .stroked-text::after{
-	position: absolute;
-	content: '';
-	height: 100%;
-	width: 100%;
-	background-color: var(--bg-color);
-	top: 0;
-	z-index: -1;
-	left: 0;
-	border-left: 3px solid var(--main-color);
-	animation: type 4s linear infinite,blink 0.7s linear infinite;
-}
-@keyframes fill {
-	0%{
-		background-position: -356px 0;
-	}
-	70%,90%{
-		background-position: 0 0;
-	}
-}
-@keyframes type {
-	0%{
-		transform: translateX(0);
-	}
-	70%,90%{
-		transform: translateX(100%);
-	}
-}
-@keyframes blink {
-	0%{
-		border-color: var(--main-color);
-	}
-	70%,90%{
-		border-color: #37c6ff53;
-	}
 }
 .home-text p {
 	font-size: 1.2rem;
@@ -247,9 +206,10 @@ nav .active {
 .social-links, .social-links a {
 	justify-content: center;
 	align-items: center;
+	transition: none;
 }
 .social-links {
-	margin-top: 9rem;
+	margin-top: 3rem;
 	font-size: 1.9rem;
 	gap: 30px;
 }
@@ -298,19 +258,20 @@ section:not(.home){
 	height: 100%;
 	border-radius: 50%;
 	width: 100%;
+	transform: rotate(0);
 	top: 0;
 	border-top: 5px solid var(--second-bg-color);
 	border-bottom: 5px solid var(--second-bg-color);
 	border-left: 5px solid var(--main-color);
 	border-right: 5px solid var(--main-color);
-	animation: spin 2s linear infinite;
+	animation: spin 5s linear infinite;
 }
 @keyframes spin {
 	0%{
-		transform: rotate(0);
+		transform: rotate(0deg);
 	}
 	100%{
-		transform: rotate(360deg);
+		transform: rotate(300deg);
 	}
 }
 .about-img{
@@ -326,7 +287,7 @@ section:not(.home){
 	font-size: 2rem;
 }
 .about-content p{
-	font-size: 20px;
+	font-size: 1.2rem;
 }
 .my-education,.my-experience{
 	border-left: 3px solid var(--main-color);
@@ -489,4 +450,67 @@ footer{
 	border: 3px solid var(--main-color);
 	overflow: hidden;
 	transition: none;
+}
+/* Media Queries */
+@media only screen and (max-width:576px) {
+	*{
+		overflow-x: hidden;
+	}
+	.content,.my-education,.main-education-container,.my-experience{
+		overflow-x: visible;
+	}
+	html{
+		font-size: 14px;
+	}
+	.main-nav-container{
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+	}
+	.main-nav-container ul{
+		flex-direction: column;
+		gap: 10px;
+		width: 100%;
+		display: none;
+	}
+	.main-nav-container ul li a,.logo{
+		padding: 0 3%;
+	}
+	.main-nav-container ul li a:hover{
+		background-color: var(--main-color);
+	}
+	.home{
+		height: fit-content;
+		padding-bottom: 20px;
+		text-align: center;
+		padding-top: 20vh;
+	}
+	.home-text{
+		width: 100%;
+	}
+	.btns{
+		display: flex;
+		gap: 1.2rem;
+		flex-wrap: wrap;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	.btns.home-btns button:nth-child(1){
+		margin: 0;
+	}
+	.main-education-container,.main-skills-container{
+		flex-direction: column;
+	}
+	.my-education,.my-experience,.my-coding-container,.my-pro-container
+	{
+		width: 100%;
+		margin-top: 20px;
+	}
+	.main-contact-container{
+		grid-template-columns: repeat(2,44%);
+	}
+	footer{
+		text-align: center;
+	}
 }

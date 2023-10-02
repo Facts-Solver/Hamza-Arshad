@@ -9,14 +9,13 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Hamza Arshad - Web Developer and Teacher</title>
 </head>
-
 <body>
     <header>
         <nav class="">
             <div class="flex justify-between main-nav-container m-auto w-94">
-                <a href="#" class="logo">Hamza.</a>
+                <a href="#" class="logo hide">Hamza.</a>
                 <i class='bx bx-menu' id="menu"></i>
-                <ul class="flex">
+                <ul class="flex hide">
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#education">Education</a></li>
@@ -25,36 +24,37 @@
                 </ul>
             </div>
         </nav>
-    </header>
-    <section class="home">
-        <div class="home-section flex m-auto w-94">
-            <div class="home-text">
-                <h1>Hi, I'm <span>Hamza Arshad</span></h1>
-                <h3 class="stroked-text">Frontend Developer</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero voluptates tempore suscipit soluta esse
-                    deleniti voluptatibus sed. Modi, odit eius dolor repudiandae tempore omnis, amet nesciunt
-                    necessitatibus, vero reiciendis ratione.</p>
-                <div class="btns home-btns">
-                    <button>Hire Me</button>
-                    <button>Let's Talk</button>
+        <section class="home">
+            <div class="home-section flex m-auto w-94 hide">
+                <div class="home-text">
+                    <h1>Hi, I'm <span>Hamza Arshad</span></h1>
+                    <h3 class="stroked-text">Frontend Developer</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero voluptates tempore suscipit soluta esse
+                        deleniti voluptatibus sed. Modi, odit eius dolor repudiandae tempore omnis, amet nesciunt
+                        necessitatibus, vero reiciendis ratione.</p>
+                    <div class="btns home-btns hide">
+                        <button>Hire Me</button>
+                        <button>Let's Talk</button>
+                    </div>
                 </div>
+                <div class="img-hover"></div>
             </div>
-            <div class="img-hover"></div>
-        </div>
-        <div class="social-links flex w-94 m-auto">
-            <a href="#"><i class='bx bxl-facebook'></i></a>
-            <a href="#"><i class='bx bxl-twitter'></i></a>
-            <a href="#"><i class='bx bxl-linkedin'></i></a>
-        </div>
-    </section>
+            <div class="social-links flex w-94 m-auto hide">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </section>
+    </header>
+    </header>
     <section class="about light" id="about">
         <h2>About <span>Me</span></h2>
-        <div class="main-about-container w-94 m-auto flex column">
-            <div class="about-img-container flex">
-                <img src="about.jpg" class="about-img" alt="">
+        <div class="main-about-container w-94 m-auto flex column hide">
+            <div class="about-img-container flex hide">
+                <img src="./assets/img/about.jpg" class="about-img" alt="">
                 <div class="spinner"></div>
             </div>
-            <div class="about-content">
+            <div class="about-content hide">
                 <h3>Frontend Developer!</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro consequuntur deleniti ad dolorum quo
                     minima consequatur saepe labore suscipit nihil maiores asperiores facere provident tempore amet
@@ -62,50 +62,50 @@
                     Deleniti fugiat voluptate repudiandae officia obcaecati dicta doloremque cumque perspiciatis
                     provident illo. Omnis, alias asperiores.</p>
             </div>
-            <div class="btns">
+            <div class="btns hide">
                 <button>Read More</button>
             </div>
         </div>
     </section>
     <section class="education dark" id="education">
-        <h2>My <span>Journey</span></h2>
-        <div class="main-education-container flex justify-between w-94 m-auto">
-            <div class="my-education column flex">
-                <h3>Education</h3>
-                <div class="content flex column">
+        <h2 class="hide">My <span>Journey</span></h2>
+        <div class="main-education-container flex justify-between w-94 m-auto hide">
+            <div class="my-education column flex hide">
+                <h3 class="hide">Education</h3>
+                <div class="content flex column hide">
                     <span class="year"><i class='bx bxs-calendar'></i> 2017 - 2018</span>
                     <h4>Master Degree - University</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus sed incidunt vero error
                         voluptas possimus ullam in sit id blanditiis!</p>
                 </div>
-                <div class="content flex column">
+                <div class="content flex column hide">
                     <span class="year"><i class='bx bxs-calendar'></i> 2018 - 2019</span>
                     <h4>Master Degree - University</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus sed incidunt vero error
                         voluptas possimus ullam in sit id blanditiis!</p>
                 </div>
-                <div class="content flex column">
+                <div class="content flex column hide">
                     <span class="year"><i class='bx bxs-calendar'></i> 2019 - 2020</span>
                     <h4>Master Degree - University</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus sed incidunt vero error
                         voluptas possimus ullam in sit id blanditiis!</p>
                 </div>
             </div>
-            <div class="my-experience column flex">
-                <h3>Experience</h3>
-                <div class="content flex column">
+            <div class="my-experience column flex hide">
+                <h3 class="hide">Experience</h3>
+                <div class="content flex column hide">
                     <span class="year"><i class='bx bxs-calendar'></i> 2017 - 2018</span>
                     <h4>Master Degree - University</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus sed incidunt vero error
                         voluptas possimus ullam in sit id blanditiis!</p>
                 </div>
-                <div class="content flex column">
+                <div class="content flex column hide">
                     <span class="year"><i class='bx bxs-calendar'></i> 2018 - 2019</span>
                     <h4>Master Degree - University</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus sed incidunt vero error
                         voluptas possimus ullam in sit id blanditiis!</p>
                 </div>
-                <div class="content flex column">
+                <div class="content flex column hide">
                     <span class="year"><i class='bx bxs-calendar'></i> 2019 - 2020</span>
                     <h4>Master Degree - University</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus sed incidunt vero error
@@ -115,49 +115,49 @@
         </div>
     </section>
     <section class="skills light" id="skills">
-        <h2>My <span>Skills</span></h2>
-        <div class="main-skills-container flex justify-between w-94 m-auto">
-            <div class="my-coding-container">
-                <h3>Coding Skills</h3>
-                <div class="coding flex column">
-                    <div class="skill flex column">
+        <h2 class=" hide">My <span>Skills</span></h2>
+        <div class="main-skills-container flex justify-between w-94 m-auto hide">
+            <div class="my-coding-container hide">
+                <h3 class="hide">Coding Skills</h3>
+                <div class="coding flex column hide">
+                    <div class="skill flex column hide">
                         <h4 class="flex justify-between">HTML<span>97%</span></h4>
                         <div class="bar"><span></span></div>
                     </div>
-                    <div class="skill flex column">
+                    <div class="skill flex column hide">
                         <h4 class="flex justify-between">CSS<span>92%</span></h4>
                         <div class="bar"><span></span></div>
                     </div>
-                    <div class="skill flex column">
+                    <div class="skill flex column hide">
                         <h4 class="flex justify-between">JavaScript<span>70%</span></h4>
                         <div class="bar"><span></span></div>
                     </div>
-                    <div class="skill flex column">
+                    <div class="skill flex column hide">
                         <h4 class="flex justify-between">Bootstrap<span>85%</span></h4>
                         <div class="bar"><span></span></div>
                     </div>
                 </div>
             </div>
-            <div class="my-pro-container">
-                <h3>Professional Skills</h3>
-                <div class="pro flex column">
-                    <div class="skill flex column">
+            <div class="my-pro-container hide">
+                <h3 class="hide">Professional Skills</h3>
+                <div class="pro flex column hide">
+                    <div class="skill flex column hide">
                         <h4 class="flex justify-between">Web Development<span>91%</span></h4>
                         <div class="bar"><span></span>
                         </div>
                     </div>
                     <div class="skill flex column">
-                        <h4 class="flex justify-between">Teaching<span>80%</span></h4>
+                        <h4 class="flex justify-between hide">Teaching<span>80%</span></h4>
                         <div class="bar"><span></span>
                         </div>
                     </div>
                     <div class="skill flex column">
-                        <h4 class="flex justify-between">Logic Building<span>75%</span></h4>
+                        <h4 class="flex justify-between hide">Logic Building<span>75%</span></h4>
                         <div class="bar"><span></span>
                         </div>
                     </div>
                     <div class="skill flex column">
-                        <h4 class="flex justify-between">Typing Speed<span>65%</span></h4>
+                        <h4 class="flex justify-between hide">Typing Speed<span>65%</span></h4>
                         <div class="bar"><span></span>
                         </div>
                     </div>
@@ -166,35 +166,35 @@
         </div>
     </section>
     <section class="contact dark" id="contact">
-        <h2>Contact <span>Me!</span></h2>
-        <form class="main-contact-container m-auto">
-            <div class="input-field">
+        <h2 class="hide">Contact <span>Me!</span></h2>
+        <form class="main-contact-container m-auto hide">
+            <div class="input-field hide">
                 <input type="text" placeholder="Full Name" name="username">
                 <span class="focused"></span>
             </div>
-            <div class="input-field">
+            <div class="input-field hide">
                 <input type="email" placeholder="Email Address" name="user-email">
                 <span class="focused"></span>
             </div>
-            <div class="input-field">
+            <div class="input-field hide">
                 <input type="tel" placeholder="Mobile Number" name="phone no">
                 <span class="focused"></span>
             </div>
-            <div class="input-field">
+            <div class="input-field hide">
                 <input type="text" placeholder="Email Subject" name="email-subject">
                 <span class="focused"></span>
             </div>
-            <div class="input-field textarea">
+            <div class="input-field textarea hide">
                 <textarea placeholder="Your Message" name="message"></textarea>
                 <span class="focused"></span>
             </div>
-            <div class="btns">
+            <div class="btns hide">
                 <button type="submit">Submit</button>
             </div>
         </form>
     </section>
     <footer class="light flex">
-        <p>Copyright@2023 by Hamza Arshad | All Rights Reserved.</p>
+        <p class="hide">Copyright@2023 by Hamza Arshad | All Rights Reserved.</p>
         <a href="#" class="up-icon flex">
             <i class='bx bx-up-arrow-alt'></i>
         </a>
