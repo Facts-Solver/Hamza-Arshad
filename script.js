@@ -18,3 +18,7 @@ let hidden = document.querySelectorAll(".hide")
 hidden.forEach((entry)=>{
 	observer.observe(entry)
 })
+let loader = document.querySelector(".loader")
+window.addEventListener("load",()=>{
+	loader.style.display = "none"
+})
