@@ -30,6 +30,13 @@
 	background: linear-gradient(180deg,#00acf09a,var(--main-color));
 	border-radius: 8px;
 }
+.loader{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--bg-color);
+	z-index: 100;
+}
 .flex {
 	display: flex;
 }
@@ -136,7 +143,7 @@ nav .active {
 .home-text h1 {
 	font-size: 3rem;
 }
-.home-text .stroked-text {
+.home-text .stroked-text,.type {
 	font-size: 2.2rem;
 	margin-bottom: 20px;
 	color: var(--main-color);
@@ -144,7 +151,14 @@ nav .active {
 	position: relative;
 	font-family: 'consolas',sans-serif;
 }
-.home-text .stroked-text::after{
+.type{
+	display: inline-block;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 4rem;
+}
+.home-text .stroked-text::after,.type::after{
 	position: absolute;
 	content: '';
 	left: 0;
@@ -154,6 +168,10 @@ nav .active {
 	background-color: var(--bg-color);
 	border-left: 2px solid var(--main-color);
 	animation: type 4s steps(18) infinite 1.2s, blink 0.7s linear infinite;
+}
+.type::after{
+	animation-timing-function: steps(10);
+	animation-delay: 0;
 }
 @keyframes type {
 	0%,100%{
